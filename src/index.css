@@ -12,7 +12,7 @@
     --shadow-default: 0 2px 6px 0 #00000061;
 
 }
-
+/* 
 .container {
     min-height: 100vh;
     display: flex;
@@ -56,4 +56,4 @@ button[disabled], button[disabled]:hover {
 p.value {
     text-align: center;
     font-size: 32px;
-}
+} */

@@ -1,9 +1,18 @@
 import Counter from "./Counter";
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import FormPage from "./FormPage";
+import DetailsPage from "./DetailsPage";
 export default function Main() {
     return (
-        <div className="container">
-            <Counter/>
-        </div>
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <FormPage />
+                </Route>
+                <Route path="/company/:id">
+                    <DetailsPage />
+                </Route>
+            </Switch>
+        </Router>
     )
 }
