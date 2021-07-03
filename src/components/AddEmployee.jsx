@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from "styled-components";
-import { addEmployee, getAllEmployee, updateEmployee } from '../actions/counterActions';
+import { getAllEmployee, updateEmployee } from '../actions/counterActions';
 
 let EmployeeForm = styled.div`
     margin-top: 30px;
@@ -60,10 +60,12 @@ export default function AddEmployee() {
     useEffect(() => {
         console.log("useEffect", loading);
         loading === false && dispatch(getAllEmployee(allCompany));
+        // eslint-disable-next-line
     }, [loading])
     useEffect(() => {
         console.log(allCompany);
         setCompany(allCompany[0]);
+        // eslint-disable-next-line
     }, [allCompany.length]);
     return (
         <EmployeeForm>

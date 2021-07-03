@@ -1,9 +1,8 @@
 import React, { useRef } from 'react'
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import styled from "styled-components";
-import { addCompany, getAllCompany, loading, updateCompany } from '../actions/counterActions';
-import db from "../firebaseConfig";
+import { getAllCompany, updateCompany } from '../actions/counterActions';
 let CompanyForm = styled.div`
     width: 250px;
     height:300px;
